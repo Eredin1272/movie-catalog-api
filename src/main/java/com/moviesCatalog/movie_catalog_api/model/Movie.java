@@ -7,7 +7,7 @@ import java.util.List;
 
 @Entity // Этот класс является сущностью базы данных
 @Table(name = "movies")
-@Data
+@Data //
 @NoArgsConstructor //Создает пустой конструктор
 @AllArgsConstructor // Создает конструктор со всеми параметрами:
 @Builder // Позволяет удобно создавать объект
