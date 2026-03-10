@@ -1,5 +1,6 @@
 package com.moviesCatalog.movie_catalog_api.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -24,5 +25,6 @@ public class Actor {
     private Integer birthYear;
 
     @ManyToMany(mappedBy = "actors")
+    @JsonIgnore // Предотвращение Infinity recursion
     private List<Movie> movies;
 }
